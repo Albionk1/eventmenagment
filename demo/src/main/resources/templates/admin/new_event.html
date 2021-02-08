@@ -39,14 +39,13 @@
                             <td><input type="text" th:field="*{name}" /></td>
                         </tr>
                         <tr>
-                            <td>Type of Event:</td>
-                            <td><forms  th:field="*{tipi}" />
+                           <td>Type of Event:</td>
+                            <td>
                             <select th:field="*{tipi}">
                             <option value="Conferences">Conferences</option>
                             <option value="Guest">Guest</option>
                             <option value="Seminar">Seminar</option>
                             <option value="Party">Party</option></select>
-                            </form>
                             </td>
                         </tr>
                         <tr>
@@ -66,7 +65,9 @@
                 </form>
             </div>
 
-
+            <form th:action="@{/admin/home/event}" method="get">
+                <button class="btn btn-md btn-warning btn-block" type="Submit">Go to view events</button>
+            </form>
 
         </div>
     </div>
