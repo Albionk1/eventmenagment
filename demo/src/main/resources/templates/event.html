@@ -22,7 +22,13 @@
     <div class="panel-group" style="margin-top:40px">
         <div class="panel panel-primary">
 
-
+            <table style="width:100%">
+            <tr>
+                <th >ID</th>
+                <th>Emri i eventit</th>
+                <th>Lloji i eventit</th>
+                <th>Pershkrimi</th>
+                <th>koha</th></tr>
             <tr th:each="event: ${events}">
                 <th th:text="${event.id}" />
                 <th th:text="${event.name}" />
@@ -30,9 +36,11 @@
                 <th th:text="${event.description}" />
                 <th th:text="${event.datetime}" />
             </tr>
-
-
+            </table>
         </div>
+        <form th:action="@{/admin/home/event/new}" method="get">
+            <button class="btn btn-md btn-warning btn-block" type="Submit">Go To create a new  event</button>
+        </form>
     </div>
 
 </div>
